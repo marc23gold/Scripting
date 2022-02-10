@@ -9,7 +9,7 @@ public:
     void printAverageDaysInCourse(string studentID);
     void printInvalidEmails();
     void printByDegreeProgram(DegreeProgram degreeProgram);
-    
+    //create an arrt of pointers, classRosterArray, to hold the data provided in the studentDataTable
     Student* classRosterArray[];
 private:
 
