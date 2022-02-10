@@ -23,7 +23,22 @@ int main() {
     
   
 
-   /* 
+   /*loop through classRosterArray and for each element:
+   classRoster.printAverageDaysInCourse(current_object's student id)*/
+
+
+   /* for the current_oject's student id, use a getter for the classRosterArray to
+   access the student id*/
+   
+   /* classRoster.printByDegreeProgram(SOFTWARE);
+      classRoster.remove("A3");
+      classRoster.printAll();
+      classRoster.remove("A3");
+
+      the above line should print a message saying such a student with this ID was not found */
+
+
+  /* Implement the destructor to release the memory that was allocated dynamically is Roster */
 
     return 0
 }
