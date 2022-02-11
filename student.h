@@ -1,7 +1,12 @@
 using namespace std;
 #include <string>
+#include <iostream>
+#include <iomanip>
+#include "degree.h"
+
 class Student {
     public:
+
     Student();
     Student(string studentID, string firstName, string lastName, string emailAddress, int age, int numDays[], string degreeProgram);
     void Print();
@@ -22,13 +27,15 @@ class Student {
     void getNumDays();
     void getDegreeProgram();
 
+    const static int daysArray = 3; 
+
     private:
     string studentID;
     string firstName;
     string lastName;
     string emailAddress;
     int age;
-    int numDays[3];
-    string degreeProgram;
+    int numDays[daysArray];
+    DegreeProgram degreeProgram;
 
 }; 
