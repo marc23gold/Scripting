@@ -1,3 +1,4 @@
+#pragma once
 using namespace std;
 #include <string>
 #include <iostream>
@@ -8,7 +9,7 @@ class Student {
     public:
 
     Student();
-    Student(string studentID, string firstName, string lastName, string emailAddress, int age, int numDays[], string degreeProgram);
+    Student(string studentID, string firstName, string lastName, string emailAddress, int age, int numDays[], DegreeProgram degreeProgram);
     void Print();
 
     void setStudentID(string studentID);
@@ -16,18 +17,20 @@ class Student {
     void setLastName(string lastName);
     void setEmailAddress(string emailAddress);
     void setAge(int age);
-    void setNumDays(int numDays);
-    void setDegreeProgram(string degreeProgram);
+    void setNumDays(const double numDays[]);
+    void setDegreeProgram(DegreeProgram degreeProgram);
 
-    void getStudentID();
-    void getFirstName();
-    void getLastName();
-    void getEmailAddress();
-    void getAge();
-    void getNumDays();
-    void getDegreeProgram();
+    string getStudentID();
+    string getFirstName();
+    string getLastName();
+    string getEmailAddress();
+    int getAge();
+    const double* getNumDays();
+    DegreeProgram getDegreeProgram();
 
     const static int daysArray = 3; 
+
+    ~Student();
 
     private:
     string studentID;
@@ -35,7 +38,7 @@ class Student {
     string lastName;
     string emailAddress;
     int age;
-    int numDays[daysArray];
+    double numDays[daysArray];
     DegreeProgram degreeProgram;
 
 }; 
