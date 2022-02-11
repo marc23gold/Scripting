@@ -42,3 +42,16 @@ Student::~Student(){}
     const double* Student::getNumDays() {return this->numDays;}
     DegreeProgram Student::getDegreeProgram() {return this->degreeProgram;}
 
+    void Student::Print() {
+        cout << this->studentID<<'\t';
+        cout << this->firstName << '\t';
+        cout << this->lastName << '\t';
+        cout << this->emailAddress << '\t';
+        cout << this->age << '\t';
+        cout << this->numDays[0] << '\t';
+        cout << this->numDays[1] << '\t';
+        cout << this->numDays[2] << '\t';
+        cout << degreeProgramS[(int)this->degreeProgram];
+        cout << endl;
+    }
+

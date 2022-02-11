@@ -1,3 +1,4 @@
+#include "roster.h"
 //create a student object for each student in the data table and populate classRosterArray
 
 //Parse each set of data identified in the studentData Table

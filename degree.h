@@ -7,4 +7,4 @@ enum DegreeProgram {
     SECURITY,NETWORK,SOFTWARE 
 };
 
-const string degreeProgram[] = {"SECURITY, NETWORK, SOFTWARE"};
+const string degreeProgramS[] = {"SECURITY, NETWORK, SOFTWARE"};

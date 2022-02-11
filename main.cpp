@@ -41,5 +41,5 @@ int main() {
 
   /* Implement the destructor to release the memory that was allocated dynamically is Roster */
 
-    return 0
+    return 0;
 }
