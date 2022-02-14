@@ -1,5 +1,4 @@
-#include <ios>
-#include <string>
+#include "roster.h"
 using namespace std;
 
 int main() {
@@ -16,6 +15,9 @@ int main() {
     
     Roster classRoster;
 
+    classRoster.printAll();
+    classRoster.printInvalidEmails();
+    
     /* add each student to classRoster */ 
 
     /*convert pseudo code 
