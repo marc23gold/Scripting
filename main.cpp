@@ -17,6 +17,13 @@ int main() {
 
     classRoster.printAll();
     classRoster.printInvalidEmails();
+
+    classRoster.printAverageDaysInCourse('A3');
+
+    classRoster.printByDegreeProgram(SOFTWARE);
+    classRoster.remove("A3");
+    classRoster.printAll();
+    classRoster.remove("A3");
     
     /* add each student to classRoster */ 
 

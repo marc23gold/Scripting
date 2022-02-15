@@ -4,7 +4,14 @@ using namespace std;
 #include <iostream>
 #include <iomanip>
 #include "degree.h"
-
+/* In the Student class:
+    StudentID,
+    firstName,
+    lastName,
+    emailAddress,
+    age,
+    array of number of days to complete each course,
+    degree program */
 class Student {
     public:
 
