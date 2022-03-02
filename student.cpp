@@ -12,6 +12,7 @@ Student::Student() {
     }
 }
 
+//constructor member initialization
 Student::Student(string studentID, string firstName, string lastName, string emailAddress, int age, int numDays[], DegreeProgram degreeProgram) {
     this->studentID = studentID;
     this->firstName = firstName;
@@ -24,9 +25,10 @@ Student::Student(string studentID, string firstName, string lastName, string ema
     this->degreeProgram = degreeProgram;
 }
 
-//constructor member initialization
+
 Student::~Student(){}
 
+    //setter functions
     void Student::setStudentID(string studentID) {this->studentID = studentID;};
     void Student::setFirstName(string firstName) {this->firstName = firstName;}
     void Student::setLastName(string lastName) {this->lastName = lastName;}
@@ -39,6 +41,7 @@ Student::~Student(){}
     }
     void Student::setDegreeProgram(DegreeProgram degreeProgram) {this->degreeProgram = degreeProgram;}
 
+    //getter functions
     string Student::getStudentID() {return this->studentID;}
     string Student::getFirstName() {return this->firstName;}
     string Student::getLastName() {return this->lastName;}

@@ -118,34 +118,16 @@ void Roster::remove(string studentID) {
     if(ok) {
         cout << "Student " << studentID << "removed" << endl;
         printAll();
+    } else {
+        cout << "Student " << studentID << " was not found" << endl;
     }
 }
 
     Roster::~Roster() {
         for(int i = 0; i < numStudents; ++i) {
-            cout << "Destructor called" << classRosterArray[i]->getStudentID() << endl;
+            cout << "Destructor called " << classRosterArray[i]->getStudentID() << endl;
             delete classRosterArray[i];
             classRosterArray[i] = nullptr;
         }
     }
 
-
-
-    
-/*define the remove function that removes students from the
-roster by studentID if the student ID does not exist, the function
-prints an error message indicating that the student was not found */
-
-/* define printALL function that prints a complete tab seperated list of student
-data in the provided format A1 [tab]
-the function should loop through all the students in classRosterArray and call the print()
-function for each student*/
-
-/* define printAverageDaysInCouse(string studentID) that correctly prints a student's average
-number of days in three courses. The student is indentified by the studentID parameter*/
-
-/*define printInvalidEmails() that verifies student email addresses and displays all invalid email
-addresses to the user*/
-
-/* define  printByDegreeProgram(DegreeProgram degreeProgram) that prints out student information for a degree program
-specified by an enumerated type */
