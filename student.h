@@ -1,5 +1,4 @@
 #pragma once
-using namespace std;
 #include <string>
 #include <iostream>
 #include <iomanip>
@@ -17,6 +16,7 @@ class Student {
 
     Student();
     Student(string studentID, string firstName, string lastName, string emailAddress, int age, int numDays[], DegreeProgram degreeProgram);
+    
     void Print();
 
     void setStudentID(string studentID);
@@ -24,7 +24,7 @@ class Student {
     void setLastName(string lastName);
     void setEmailAddress(string emailAddress);
     void setAge(int age);
-    void setNumDays(const double numDays[]);
+    void setNumDays(const int numDays[]);
     void setDegreeProgram(DegreeProgram degreeProgram);
 
     string getStudentID();
@@ -32,20 +32,28 @@ class Student {
     string getLastName();
     string getEmailAddress();
     int getAge();
-    const double* getNumDays();
+    const int* getNumDays();
     DegreeProgram getDegreeProgram();
 
-    const static int daysArray = 3; 
+    
 
     ~Student();
 
     private:
+    //studentID
     string studentID;
+    //first name
     string firstName;
+    //last name
     string lastName;
+    //email address
     string emailAddress;
+    //age
     int age;
-    double numDays[daysArray];
+    //array of number of days to complete the course
+    //delete later: prices is numdays
+    int numDays[3];
+    //degree program of type degreeprogram
     DegreeProgram degreeProgram;
 
 }; 

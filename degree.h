@@ -3,8 +3,11 @@
 #pragma once
 #include <string>
 using namespace std;
+//enumeration of DegreeProgram
 enum DegreeProgram {
     SECURITY,NETWORK,SOFTWARE 
 };
 
-const string degreeProgramS[] = {"SECURITY, NETWORK, SOFTWARE"};
+static const string degreeProgramS[] = {"SECURITY", "NETWORK", "SOFTWARE"};
+
+//delete later: BookType = DegreeProgram and bookTypeStrings[] = degreeProgramS
