@@ -7,7 +7,6 @@ using namespace std;
 enum DegreeProgram {
     SECURITY,NETWORK,SOFTWARE 
 };
-
+//parallel string for enumeration
 static const string degreeProgramS[] = {"SECURITY", "NETWORK", "SOFTWARE"};
 
-//delete later: BookType = DegreeProgram and bookTypeStrings[] = degreeProgramS

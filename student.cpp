@@ -24,6 +24,7 @@ Student::Student(string studentID, string firstName, string lastName, string ema
     this->degreeProgram = degreeProgram;
 }
 
+//constructor member initialization
 Student::~Student(){}
 
     void Student::setStudentID(string studentID) {this->studentID = studentID;};
@@ -47,7 +48,6 @@ Student::~Student(){}
     DegreeProgram Student::getDegreeProgram() {return this->degreeProgram;}
 
     void Student::Print() {
-        //delete later: may have to convert these into function calls instead later
         cout << this->studentID<<'\t';
         cout << this->firstName << '\t';
         cout << this->lastName << '\t';

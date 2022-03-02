@@ -1,15 +1,20 @@
 #include "roster.h"
-//create a student object for each student in the data table and populate classRosterArray
+
 
 Roster::Roster(){}
 
-Student** Roster::getStudents(){
-    
+/*define the add function 
+ that sets the Student class variables */
+void Roster::add( string studentID, string firstName, string lastName, string emailAddress, int age, int numdays1, int numdays2, int numdays3, DegreeProgram degreeProgram) {
+    int daysInClass[3] = {numdays1, numdays2, numdays3};
+    //create a student object for each student in the data table and populate classRosterArray
+    classRosterArray[++index] = new Student(studentID, firstName, lastName, emailAddress, age, daysInClass, degreeProgram);
+    cout << "Student " << index + 1 << " being added" << endl;
 }
 
 
 //Parse each set of data identified in the studentData Table
-void Roster::parse(string studentData) {
+void Roster::parseandadd(string studentData) {
     DegreeProgram degreeProgram = DegreeProgram::SOFTWARE;
     if (studentData.back() == 'Y') {
         degreeProgram = DegreeProgram::SECURITY;
@@ -51,19 +56,13 @@ void Roster::parse(string studentData) {
     int numdays3 = stoi(studentData.substr(left, right - left));
     left = right + 1;
 
+    //Add each student object to classRosterArray
     add(studentID, firstName, lastName, emailAddress, age, numdays1, numdays2, numdays3, degreeProgram);
 
 }
 
-//Add each student object to classRosterArray
 
-/*define the add function 
- that sets the Student class variables */
-void Roster::add( string studentID, string firstName, string lastName, string emailAddress, int age, int numdays1, int numdays2, int numdays3, DegreeProgram degreeProgram) {
-    int daysInClass[3] = {numdays1, numdays2, numdays3};
-    classRosterArray[++index] = new Student(studentID, firstName, lastName, emailAddress, age, daysInClass, degreeProgram);
-    cout << "Book added to class roster at row" << index + 1 << endl;
-}
+
 
 
 void Roster::printAll() {

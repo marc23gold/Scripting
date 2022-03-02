@@ -15,10 +15,14 @@ class Student {
     public:
 
     Student();
+
+    //constructor using all of the input parameters provided in the table
     Student(string studentID, string firstName, string lastName, string emailAddress, int age, int numDays[], DegreeProgram degreeProgram);
     
+    //print() to print specific student data
     void Print();
 
+    //setters for each instance variable from part D1
     void setStudentID(string studentID);
     void setFirstName(string firstName);
     void setLastName(string lastName);
@@ -27,6 +31,7 @@ class Student {
     void setNumDays(const int numDays[]);
     void setDegreeProgram(DegreeProgram degreeProgram);
 
+    //getters for each instance variable from part D1
     string getStudentID();
     string getFirstName();
     string getLastName();
@@ -51,7 +56,6 @@ class Student {
     //age
     int age;
     //array of number of days to complete the course
-    //delete later: prices is numdays
     int numDays[3];
     //degree program of type degreeprogram
     DegreeProgram degreeProgram;
